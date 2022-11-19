@@ -131,6 +131,13 @@ position: relative;
   width: 204px;
   background-repeat: no-repeat;
   position: absolute;
+  z-index: 1;
+}
+
+@media (max-width:767px) {
+  .dots{
+    opacity: 0.2;
+}
 }
 .dots-up{
   top: 200px;
@@ -1101,9 +1108,11 @@ position: relative;
   position: relative;
 }
 .events .container {
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 1;
 }
 .events .container img {
   max-width: 450px;
@@ -1154,6 +1163,7 @@ position: relative;
   font-weight: bold;
   padding: 15px;
 }
+
 
 .events .info .time .unit :last-child {
   padding: 8px 10px;
@@ -1561,6 +1571,11 @@ position: relative;
   flex-wrap: wrap;
   min-height: 100vh;
 }
+@media (max-width:991px) {
+  .discount{
+    padding-bottom: 50px;
+  }
+}
 
 .discount .image {
   background-image: url("../img/discount-background1.jpg");
@@ -1613,11 +1628,13 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 @media (max-width: 991px) {
   .discount .form {
-    flex-basis: 100%;
-    margin-top: 30px;
+    display: block;
+    flex-basis: 80%;
+    margin: 50px auto;
   }
 }
 .discount .form h2 {
